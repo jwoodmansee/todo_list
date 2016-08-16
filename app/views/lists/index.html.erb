@@ -1,0 +1,6 @@
+<h1>Things That You Need ToDo</h1>
+<p><%= link_to 'New Item', new_list_path %></p>
+<% @lists.each do |list| %>
+  <p><%= list.things_todo %></p>
+      <p><%= list.done %></p>
+<% end %>  

@@ -1,0 +1,11 @@
+<h1>What do you have todo?</h1>
+
+<%= form_for @list do |f| %>
+  <%= f.label :things_todo %>
+  <%= f.text_field :things_todo %>
+  <%= f.label :done %>
+  <%= f.text_field :done %>
+  <%= f.label :thing_you_would_rather_do %>
+  <%= f.text_area :thing_you_would_rather_do %>
+  <%= f.submit %>
+<% end %>
