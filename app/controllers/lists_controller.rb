@@ -19,7 +19,7 @@ class ListsController < ApplicationController
     @list = List.new(list_params)
 
     if @list.save
-      redirect_to list_path(@list)
+      redirect_to lists_path(@list)
     else
       render :new
     end
@@ -37,14 +37,14 @@ class ListsController < ApplicationController
 
   def destroy
     @list = List.find(params[:id])
-    @List.destroy
-    redirect_to posts_list
+    @list.destroy
+    redirect_to lists_path
   end
 
 
   private
 
-  def post_params
+  def list_params
     params.require(:list).permit(:things_todo, :done, :thing_you_would_rather_do)
 
   end
