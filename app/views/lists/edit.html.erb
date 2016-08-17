@@ -1,2 +1,11 @@
-<h1>Lists#done</h1>
-<p>Find me in app/views/lists/done.html.erb</p>
+<h1>Change todo</h1>
+
+<%= form_for @list do |f| %>
+  <%= f.label :things_todo %>
+  <%= f.text_field :things_todo %>
+  <%= f.label :done %>
+  <%= f.text_field :done %>
+  <%= f.label :thing_you_would_rather_do %>
+  <%= f.text_field :thing_you_would_rather_do %>
+  <%= f.submit %>
+<% end %>

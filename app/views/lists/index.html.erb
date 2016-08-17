@@ -1,8 +1,9 @@
 <h1>Things That You Need ToDo</h1>
 <p><%= link_to 'New Item', new_list_path %></p>
 <% @lists.each do |list| %>
-  <p><%= list.things_todo %></p>
-      <p><%= list.done %></p>
+  <h3><%= list.things_todo %></h3>
+    <p><%= list.done %></p>
+  <h2><%= list.thing_you_would_rather_do %></h2>  
 <%= link_to 'Show ToDo', list_path(list) %>
 <%= link_to 'Edit Job', edit_list_path(list) %>
 <%= link_to 'Destroy', list_path(list), method: :delete %>

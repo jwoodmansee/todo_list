@@ -29,15 +29,14 @@ class ListsController < ApplicationController
     @list = List.find(params[:id])
 
     if @list.update(list_params)
-      redirect_to list_path(@list)
+      redirect_to lists_path(@list)
     else
       render :edit
     end
   end
 
   def destroy
-    @list = List.find(params[:id])
-    @list.destroy
+    @list = List.find(params[:id]).destroy
     redirect_to lists_path
   end
 
